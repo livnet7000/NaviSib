@@ -10,6 +10,7 @@
     <meta property="og:image" content="Logo_NaviSib.png" />
     <link rel="icon" href="Logo_NaviSib.png" type="image/png" />
     <style>
+        /* Общие стили */
         * {
             margin: 0;
             padding: 0;
@@ -35,6 +36,7 @@
             padding: 2.5rem 2rem;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
         }
+        /* Логотип */
         .logo {
             text-align: center;
             margin-bottom: 2rem;
@@ -94,6 +96,7 @@
             font-size: 1.05rem;
             color: #1e293b;
         }
+        /* Права */
         .rights h2 {
             font-size: 1.4rem;
             font-weight: 600;
@@ -145,6 +148,52 @@
         .rights-card.deny li::before {
             color: #b91c1c;
         }
+
+        /* Блок руководства */
+        .manual {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: #eef6ff;
+            border-radius: 1.2rem;
+            border-left: 5px solid #2563eb;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        .manual h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .manual p {
+            color: #1e293b;
+            margin: 0;
+        }
+        .manual .btn-doc {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: #2563eb;
+            color: #fff;
+            padding: 0.6rem 1.8rem;
+            border-radius: 40px;
+            text-decoration: none;
+            font-weight: 600;
+            align-self: flex-start;
+            transition: 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .manual .btn-doc:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Скачивание APK */
         .download {
             text-align: center;
             margin-top: 2rem;
@@ -179,16 +228,19 @@
             border-top: 1px solid #e9edf2;
             padding-top: 1.5rem;
         }
+
         @media (max-width: 600px) {
             .container { padding: 1.5rem 1rem; }
             .logo h1 { font-size: 2.2rem; }
             .rights-grid { grid-template-columns: 1fr; }
             .download-btn { padding: 0.8rem 2rem; font-size: 1rem; width: 100%; }
+            .manual .btn-doc { align-self: stretch; text-align: center; justify-content: center; }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Логотип -->
         <div class="logo">
             <img src="Logo_NaviSib.png" alt="NaviSib Logo" class="logo-img" />
             <h1>NaviSib</h1>
@@ -197,7 +249,9 @@
                 <span>Tiller Autopilot</span>
             </div>
         </div>
-        <div class="tagline">Надёжное управление</div>
+        <div class="tagline">Надёжное управление · Надежное управление</div>
+
+        <!-- Описание -->
         <div class="description">
             <p>
                 <strong>Приложение для Android</strong> предназначено для работы совместно с
@@ -205,6 +259,19 @@
                 Обеспечивает точное и надёжное управление судном в автоматическом режиме.
             </p>
         </div>
+
+        <!-- Новый блок: Руководство капитана -->
+        <div class="manual">
+            <h2>📘 Руководство капитана</h2>
+            <p>
+                <strong>Эксплуатация румпельного автопилота</strong> — подробная инструкция по установке, настройке и безопасной работе с NaviSib.
+            </p>
+            <a href="Manual_NaviSib.docx" class="btn-doc" download>
+                📄 Скачать руководство (DOCX)
+            </a>
+        </div>
+
+        <!-- Права использования -->
         <div class="rights">
             <h2>📄 Права на использование</h2>
             <div class="rights-grid">
@@ -224,6 +291,8 @@
                 </div>
             </div>
         </div>
+
+        <!-- Скачивание APK -->
         <div class="download">
             <a href="NaviSib.apk" class="download-btn" download>
                 📲 Скачать приложение (APK)
@@ -232,6 +301,7 @@
                 Версия для Android. Убедитесь, что в настройках разрешена установка из неизвестных источников.
             </p>
         </div>
+
         <div class="footer">
             &copy; 2026 NaviSib · Все права защищены
         </div>
